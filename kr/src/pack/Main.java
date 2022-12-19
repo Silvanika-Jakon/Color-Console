@@ -1,20 +1,20 @@
 package pack;
-import java.text.MessageFormat;
-import java.util.*;
 
-import static pack.print.print_smth;
+import java.util.Scanner;
 
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int i = 1;
-        while (i == 1) {
-            print_smth();
-            System.out.println("Хотите еще раз: ");
-            System.out.println("1 --- Да");
-            System.out.println("0 --- Нет");
-            i = sc.nextInt();
+public class print {
+    public static void print_color(String color, String text) {
+        Color e = check(color);
+        System.out.println(e + text + Color.RESET);
+    }
+    public static Color check(String id) {
+        try {
+            return Color.valueOf(id);
+        } catch (IllegalArgumentException e) {
+            throw new RuntimeException(
+                    "Invalid value for color");
         }
+
     }
 }
+
