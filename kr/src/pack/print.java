@@ -1,20 +1,9 @@
 package pack;
 
-import java.util.Scanner;
-
 public class print {
-    public static void print_color(String color, String text) {
-        Color e = check(color);
-        System.out.println(e + text + Color.RESET);
+    public static void print_color(Color e, String text) {
+        System.out.println(e.getA_c() + text + Color.RESET.getA_c());
     }
-    public static Color check(String id) {
-        try {
-            return Color.valueOf(id);
-        } catch (IllegalArgumentException e) {
-            throw new RuntimeException(
-                    "Invalid value for color");
-        }
-
-    }
+    
 }
 
