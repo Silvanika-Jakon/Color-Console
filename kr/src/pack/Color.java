@@ -16,9 +16,5 @@ public enum Color {
     Color(String ansi_color) {
         a_c = ansi_color;
     }
-    @Override
-    public String toString() {
-        return a_c;
-    }
-
+   
 }
