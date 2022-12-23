@@ -16,5 +16,9 @@ public enum Color {
     Color(String ansi_color) {
         a_c = ansi_color;
     }
+    
+    public String getA_c() {
+        return a_c;
+    }
    
 }
